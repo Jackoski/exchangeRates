@@ -1,37 +1,27 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const request = require('request')
-const rp = require('request-promises')
+const routerExchange = require('./routers/exchange')
+const path = require('path')
 
 const app = express()
 
-
-
+// handlebars middelware
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}))
+app.set('view engine', 'handlebars')
 
 // setting JSON parser
 app.use(express.json())
 
+// setting path route to public folder
+app.use(express.static(path.join(__dirname, 'public')))
 
-// getting and rendering exchange rate from nbp api
 
-app.get("/", async (req, res) => {
-    let rates
-    const uri = 'http://api.nbp.pl/api/exchangerates/tables/a?format=json' //requesting whole data
-    const getRates = {
-        uri,
-        json: true //parsing it to json if before parsing goes wrong
-    }
+// setting exchange rates router
+app.use(routerExchange)
 
-    await rp(getRates).then((exchangeRates) => { //getting whole data using request-promises
-        rates = exchangeRates.body[0].rates //saveing it to rates variable
-    }).catch(err => {
-        res.status(500).send({
-            error: 'something went wrong, try again later' //catching error
-        })
-    })
 
-    res.send(rates)
-})
 
 
 const port = process.env.PORT || 3000
