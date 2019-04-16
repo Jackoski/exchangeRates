@@ -1,4 +1,15 @@
-<h1>działa</h1>
+<section class="exchangeInput">
+    <h5>ilość PLN do wymiany:</h5> <input type="numbers" value="1" class="plnToExchange">
+</section>
+
 {{#each currencyRates}}
-<p>{{code}}</p>
+<section class="specificCurrency">
+    <p class="polishCurenncy">Polski złoty</p>
+    <p class="polishCurrencyQuantity">1</p>
+    <p class="shortPolishCurrency">PLN</p>
+    <p class="equals">=</p>
+    <p class="foreginCurrency">{{currency}}</p>
+    <p class="foreginQuantity">{{mid}}</p>
+    <p class="foreginCurrencyName">{{code}}</p>
+</section>
 {{/each}}
