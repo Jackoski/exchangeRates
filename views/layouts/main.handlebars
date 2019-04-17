@@ -24,6 +24,40 @@
             </footer>
         </div>
     </div>
+    <script>
+        const currencyCode = [...document.querySelectorAll('.foreginCurrencyName')]
+        const currencyValue = [...document.querySelectorAll('.foreginQuantity')]
+        const resultToExchange = document.querySelector('.resultToExchange')
+        const plnToExchange = document.querySelector('.plnToExchange')
+        let selectedRate
+        let selectedPlnValue
+        let currencyRates = [{
+        }]
+        for (let i = 0; i < currencyCode.length; i++) {
+            currencyRates[i] = {
+                code: currencyCode[i].textContent,
+                value: currencyValue[i].textContent
+            }
+        }
+
+        const selectedCurrency = (value) => {
+            selectedRate = value
+            currencyRates.forEach((rate) => {
+                if (rate.code == selectedRate) {
+                    resultToExchange.value = rate.value * plnToExchange.value
+                }
+            })
+        }
+        const selectedPln = (qty) => {
+            currencyRates.forEach((rate) => {
+                if (rate.code == selectedRate) {
+                    resultToExchange.value = rate.value * qty
+                }
+            })
+        }
+
+
+    </script>
 </body>
 
 </html>

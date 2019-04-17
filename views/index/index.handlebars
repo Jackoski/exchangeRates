@@ -1,5 +1,17 @@
 <section class="exchangeInput">
-    <h5>ilość PLN do wymiany: </h5> <input type="numbers" value="1" class="plnToExchange">
+    <label for="plnToExchange">PLN:</label>
+    <input type="number" min="0" value="1" name="plnToExchange" class="plnToExchange"
+        onchange="selectedPln(this.value)">
+    <div class="input-field">
+
+        <select name="currency" class="selectedCurrency" onchange="selectedCurrency(this.value)">
+            <option value="" selected>wybierz walutę</option>
+            {{#each currencyRates}}
+            <option value="{{code}}">{{code}}</option>
+            {{/each}}
+        </select>
+        <label for="currency">wynik:</label>
+    </div><input type="number" value="" class="resultToExchange">
 </section>
 
 {{#each currencyRates}}

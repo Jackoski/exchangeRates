@@ -56,6 +56,11 @@ header section span {
     align-items: center;
 }
 
+.plnToExchange,
+.resultToExchange {
+    margin: 0 20px;
+}
+
 .specificCurrency {
     display: flex;
     justify-content: center;
