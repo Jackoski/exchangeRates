@@ -5,13 +5,12 @@
     <div class="input-field">
 
         <select name="currency" class="selectedCurrency" onchange="selectedCurrency(this.value)">
-            <option value="" selected>wybierz walutę</option>
+            <option value="" selected>Waluta</option>
             {{#each currencyRates}}
             <option value="{{code}}">{{code}}</option>
             {{/each}}
         </select>
-        <label for="currency">wynik:</label>
-    </div><input type="number" value="" class="resultToExchange">
+    </div><input type="number" min="0" value="" class="resultToExchange" onchange="selectedForeginCurrency(this.value)">
 </section>
 
 {{#each currencyRates}}

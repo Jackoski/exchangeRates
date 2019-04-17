@@ -61,6 +61,28 @@ header section span {
     margin: 0 20px;
 }
 
+input,
+select {
+    width: 120px;
+    height: 40px;
+    color: orangered;
+    background-color: white;
+    border: none;
+    border-radius: 1%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+}
+
+select {
+    background: url("../img//arrow2.png") no-repeat scroll right bottom;
+    background-size: contain;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
 .specificCurrency {
     display: flex;
     justify-content: center;
