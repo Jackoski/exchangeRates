@@ -1,26 +1,31 @@
 <section class="exchangeInput">
-    <label for="plnToExchange">PLN:</label>
-    <input type="number" min="0" value="1" name="plnToExchange" class="plnToExchange"
-        onchange="selectedPln(this.value)">
+
     <div class="input-field">
 
-        <select name="currency" class="selectedCurrency" onchange="selectedCurrency(this.value)">
-            <option value="" selected>Waluta</option>
-            {{#each currencyRates}}
-            <option value="{{code}}">{{code}}</option>
-            {{/each}}
-        </select>
-    </div><input type="number" min="0" value="" class="resultToExchange" onchange="selectedForeginCurrency(this.value)">
+
+    </div><input type="number" min="0" value="0" class="resultToExchange">
+    <select name="currency" class="selectedCurrency">
+        <option value="" selected>Wybór waluty</option>
+        {{#each currencyRates}}
+        <option value="{{code}}">{{code}}</option>
+        {{/each}}
+    </select>
+    <label for="currency"> =</label>
+
+
+    <input type="number" min="0" value="0" name="plnToExchange" class="plnToExchange">
+    <label for="plnToExchange"> PLN</label>
 </section>
 
 {{#each currencyRates}}
 <section class="specificCurrency">
-    <p class="polishCurenncy">Polski złoty</p>
-    <p class="polishCurrencyQuantity">1</p>
-    <p class="shortPolishCurrency">PLN</p>
-    <p class="equals">=</p>
     <p class="foreginCurrency">{{currency}}</p>
-    <p class="foreginQuantity">{{mid}}</p>
+    <p class="polishCurrencyQuantity">1</p>
     <p class="foreginCurrencyName">{{code}}</p>
+    <p class="equals">=</p>
+    <p class="polishCurenncy">Polski złoty</p>
+    <p class="foreginQuantity">{{mid}}</p>
+    <p class="shortPolishCurrency">PLN</p>
+
 </section>
 {{/each}}

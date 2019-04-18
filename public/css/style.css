@@ -61,6 +61,10 @@ header section span {
     margin: 0 20px;
 }
 
+label {
+    margin-left: 20px;
+}
+
 input,
 select {
     width: 120px;
@@ -72,11 +76,10 @@ select {
     text-align: center;
     font-family: 'Nunito', sans-serif;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 select {
-    background: url("../img//arrow2.png") no-repeat scroll right bottom;
-    background-size: contain;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -95,7 +98,7 @@ select {
     content: '';
     display: block;
     position: absolute;
-    left: 170px;
+    left: 240px;
     width: 42px;
     height: 42px;
     background-color: orangered;
@@ -106,7 +109,7 @@ select {
     content: '';
     display: block;
     position: absolute;
-    right: 170px;
+    right: 245px;
     width: 42px;
     height: 42px;
     background-color: orangered;
@@ -120,15 +123,16 @@ select {
 }
 
 .polishCurenncy {
-    width: 150px;
+    width: 120px;
 }
 
 .shortPolishCurrency {
-    width: 40px;
+    width: 60px;
+    text-align: left
 }
 
 .polishCurrencyQuantity {
-    width: 100px;
+    width: 60px;
 }
 
 .equals {
@@ -136,15 +140,15 @@ select {
 }
 
 .foreginCurrency {
-    width: 350px;
+    width: 380px;
 }
 
 .foreginCurrencyName {
-    width: 80px;
+    width: 40px;
 }
 
 .foreginQuantity {
-    width: 200px;
+    width: 120px;
 }
 
 
