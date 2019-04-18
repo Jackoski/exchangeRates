@@ -94,22 +94,20 @@ select {
     font-weight: 700
 }
 
-.specificCurrency::before {
+.round1 {
     content: '';
-    display: block;
-    position: absolute;
-    left: 240px;
+    position: relative;
+    left: 20px;
     width: 42px;
     height: 42px;
     background-color: orangered;
     border-radius: 50%;
 }
 
-.specificCurrency::after {
+.round2 {
     content: '';
-    display: block;
-    position: absolute;
-    right: 245px;
+    position: relative;
+    right: 20px;
     width: 42px;
     height: 42px;
     background-color: orangered;
@@ -127,6 +125,7 @@ select {
 }
 
 .shortPolishCurrency {
+    z-index: 1;
     width: 60px;
     text-align: left
 }
@@ -141,6 +140,7 @@ select {
 
 .foreginCurrency {
     width: 380px;
+    z-index: 1;
 }
 
 .foreginCurrencyName {
@@ -317,4 +317,125 @@ footer a i {
     border-left: 18.75px solid transparent;
     border-right: 18.75px solid transparent;
     border-top: 10px solid orangered;
+}
+
+@media (max-width: 950px) {
+    .specificCurrency {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        align-items: center
+    }
+
+    .round1 {
+        left: 15px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .round2 {
+        right: 15px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .specificCurrency p {
+        padding: 10px 0;
+    }
+
+    .polishCurenncy {
+        width: 120px;
+    }
+
+    .shortPolishCurrency {
+        width: 60px;
+        text-align: left
+    }
+
+    .polishCurrencyQuantity {
+        width: 30px;
+    }
+
+    .equals {
+        width: 20px;
+    }
+
+    .foreginCurrency {
+        width: 300px;
+    }
+
+    .foreginCurrencyName {
+        width: 40px;
+    }
+
+    .foreginQuantity {
+        width: 60px;
+    }
+
+
+
+    .socialIcons {
+        right: 10vw;
+    }
+}
+
+@media (max-width: 630px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header .details section {
+        margin: 50px 10px;
+        font-size: 18px;
+    }
+
+    .plnToExchange,
+    .resultToExchange {
+        margin: 0 5px;
+    }
+
+    label {
+        margin: 0
+    }
+
+    .polishCurrencyName {
+        margin: 0;
+    }
+
+    input,
+    select {
+        width: 95px;
+    }
+
+    .polishCurenncy {
+        display: none
+    }
+
+    footer a {
+        padding-right: 30px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .socialIcons {
+        right: 0px;
+    }
+}
+
+@media (max-width: 425px) {
+    .specificCurrency {
+        width: 100vw;
+        margin: 20px 0;
+    }
+
+
+    .round1 {
+        left: 10px;
+    }
+
+    .round2 {
+        right: 10px;
+    }
 }

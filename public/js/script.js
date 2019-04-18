@@ -7,6 +7,9 @@ const linkedin = document.querySelector('.social1')
 const github = document.querySelector('.social2')
 const gmail = document.querySelector('.social3')
 const faccebook = document.querySelector('.social4')
+
+// links social icons to pages
+
 linkedin.addEventListener('click', () => {
     window.open('https://www.linkedin.com/in/jacek-majda-aab81b17b/', '_blank');
 })
@@ -19,15 +22,22 @@ gmail.addEventListener('click', () => {
 faccebook.addEventListener('click', () => {
     window.open('https://www.facebook.com/jacek.majda', '_blank');
 })
+
+// currency exchange calculator
+
 let selectedRate
 let selectedPlnValue
 let currencyRates = [{}]
+
+// connecting currency code with rates
 for (let i = 0; i < currencyCode.length; i++) {
     currencyRates[i] = {
         code: currencyCode[i].textContent,
         value: currencyValue[i].textContent
     }
 }
+
+// calc value beetwen PLN and choosen currency
 
 selectedCurrency.addEventListener('change', () => {
     selectedRate = selectedCurrency.value
