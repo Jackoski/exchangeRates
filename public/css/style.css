@@ -155,7 +155,8 @@ select {
 /* footer */
 html body footer {
     box-sizing: border-box;
-    height: 80px
+    height: 80px;
+    display: inline-block;
 }
 
 footer a {
@@ -163,7 +164,6 @@ footer a {
     color: white;
     font-size: 20px;
     text-decoration: none;
-    margin-top: 40px;
     font-weight: 700;
 }
 
@@ -174,20 +174,26 @@ footer a i {
 
 
 .socialIcons {
-    position: absolute;
+    margin-top: 10px;
+    margin-left: 50px;
     display: inline-block;
     width: 150px;
     right: 20vw;
     color: white;
 }
 
+.socialIcons i {
+    z-index: 1;
+}
+
 .social1 {
+    display: block;
     width: 35px;
     height: 20px;
+    top: -11px;
+    left: 39px;
     background: orangered;
     position: relative;
-    left: 80.3px;
-    top: 15.5px;
     cursor: pointer;
 }
 
@@ -220,8 +226,7 @@ footer a i {
     height: 20px;
     background: orangered;
     position: relative;
-    top: 26px;
-    left: 61px;
+    left: 2.5px;
     cursor: pointer;
 }
 
@@ -254,8 +259,6 @@ footer a i {
     height: 20px;
     background: orangered;
     position: relative;
-    left: 44.5px;
-    bottom: 25.5px;
     cursor: pointer;
 
 }
@@ -289,8 +292,8 @@ footer a i {
     height: 20px;
     background: orangered;
     position: relative;
-    left: 25.5px;
-    bottom: 15px;
+    top: -31px;
+    left: -21px;
     cursor: pointer;
 
 }
@@ -373,12 +376,6 @@ footer a i {
     .foreginQuantity {
         width: 60px;
     }
-
-
-
-    .socialIcons {
-        right: 10vw;
-    }
 }
 
 @media (max-width: 630px) {
@@ -414,13 +411,11 @@ footer a i {
     }
 
     footer a {
-        padding-right: 30px;
-        margin-top: 20px;
         font-size: 14px;
     }
 
-    .socialIcons {
-        right: 0px;
+    .social1 {
+        top: -9.5px;
     }
 }
 
@@ -437,5 +432,11 @@ footer a i {
 
     .round2 {
         right: 10px;
+    }
+}
+
+@media (max-width: 335px) {
+    .socialIcons {
+        margin-left: 0
     }
 }

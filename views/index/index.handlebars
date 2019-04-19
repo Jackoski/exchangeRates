@@ -3,8 +3,8 @@
     <div class="input-field">
 
 
-    </div><input type="number" min="0" value="0" class="resultToExchange">
-    <select name="currency" class="selectedCurrency">
+    </div><input type="number" min="0" value="0" class="resultToExchange" title="Wpisz kwotę którą chesz wymienić">
+    <select name="currency" class="selectedCurrency" title="Wybierz walutę, którą chcesz wymienić">
         <option value="" selected>Wybierz</option>
         {{#each currencyRates}}
         <option value="{{code}}">{{code}}</option>
@@ -13,7 +13,8 @@
     <label for="currency"> =</label>
 
 
-    <input type="number" min="0" value="0" name="plnToExchange" class="plnToExchange">
+    <input type="number" min="0" value="0" name="plnToExchange" class="plnToExchange"
+        title="Wpisz kwotę którą chesz wymienić">
     <label for="plnToExchange" class="polishCurrencyName"> PLN</label>
 </section>
 
