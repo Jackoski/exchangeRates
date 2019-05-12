@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // setting exchange rates router
 app.use(routerExchange)
 
-
+// test
 
 
 const port = process.env.PORT || 3000
